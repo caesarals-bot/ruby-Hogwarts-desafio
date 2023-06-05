@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="mt-3">Charaters Index</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Synopsis</th>
+                <th>Director</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @characters.each do |character|%>
+            <tr>
+                <td><%= character.name%></td>
+                <td><%= character.location%></td>
+                <td><%= character.house%></td>
+                <td><%= link_to 'Show', character_path(character), class: "btn btn-primary"%></td>
+                <td><%= button_to 'Delete', character_path(character), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-primary"  %></td>
+                <td><%= link_to 'Edit', edit_character_path(character), method: :update, class: "btn btn-primary" %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+    <p>
+        <%= link_to 'Create new character', new_character_path, class: "btn btn-primary m-2"%>
+    </p>
+</div>

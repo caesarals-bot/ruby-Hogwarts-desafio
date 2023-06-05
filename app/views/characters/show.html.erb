@@ -1,0 +1,23 @@
+
+<div class="card border-success mb-3 text-center container mt-4" style="max-width: 18rem;">
+    <div class="card-header bg-transparent border-success">
+      <strong>Name: </strong><%= @character.name%>
+    </div>
+    <div class="card-body text-success">
+      <h5 class="card-title">
+        <strong>location: </strong>
+        <%= @character.location%>
+      </h5>
+      <p class="card-text">
+        <strong>house: </strong>
+        <%= @character.house%>
+      </p>
+    </div>
+    <div class="card-footer bg-transparent border-success">Howarts</div>
+      <%= link_to 'Edit' , edit_character_path(@character), class: "btn btn-primary m-2" %>
+      <%= button_to 'Delete' , character_path(@character), method: :delete, data: {confirm: "Are you sure" },
+        class: "btn btn-primary m-2" %>
+      <%= link_to 'Return to movies listing' , characters_path, class: "btn btn-primary m-2" %>
+      <%= link_to 'Create new article' , new_character_path, class: "btn btn-primary m-2" %>
+    </div>
+</div>

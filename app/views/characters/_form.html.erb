@@ -1,0 +1,29 @@
+<% if @character.errors.any? %>
+    <h2>The following errors prevented the character from being saved</h2>
+    <ul>
+        <% @character.errors.full_messages.each do |msg|%>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_with(model: @character, local: true) do |f|%>
+    <div class="mb-3">
+        <%= f.label :name, class: "form-label" %><br/>
+        <%= f.text_field :name, class:"form-control" %>
+    </div>
+
+    <div class="mb-3">
+        <%= f.label :location, class: "form-label" %><br/>
+        <%= f.text_field :location, class:"form-control" %>
+    </div>
+
+    <div class="mb-3">
+        <%= f.label :house, class: "form-label" %><br/>
+        <%= f.text_field :house, class:"form-control" %>
+    </div>
+
+    <div class="mb-3 ">
+        <%= f.submit %>
+    </div>
+<% end %>
