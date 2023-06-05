@@ -1,2 +1,13 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="container text-center">
+    <h1>Hogwarts</h1>
+    <div class="row">
+        <%= image_tag('howarts.png', class:"img-thumbnail col-8 me-1") %>
+        <div class="col">
+            <p class="fw-semibold ">donde la magia se convierte en realidad y los sueños se hacen tangibles. Este majestuoso castillo, ubicado en un lugar secreto, ha cautivado a generaciones de brujas y magos con su esplendor arquitectónico y su ambiente lleno de misterio. Aquí, las aulas cobran vida con hechizos y pociones, los pasillos susurran historias antiguas y los retratos mágicos observan cada paso que das.</p>
+            <p class="fw-semibold ">En Hogwarts, las amistades se forjan entre estudiantes de distintas casas, mientras se enfrentan a desafíos y pruebas que pondrán a prueba su valentía, sabiduría, lealtad y astucia. Los profesores son guías sabios y enigmáticos, expertos en sus respectivas materias y dispuestos a ayudar a los jóvenes brujos y brujas a desatar su verdadero potencial.</p>
+            <%= link_to 'Integrantes de Hogwarts', characters_path, class: "btn btn-success"%>
+        </div>
+        
+    </div>
+    
+</div>
